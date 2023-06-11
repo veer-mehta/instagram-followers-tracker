@@ -25,28 +25,25 @@ keep the edge webdriver file in same folder as this file
 chrome_options = webdriver.ChromeOptions()
 s=service.Service('chromedriver.exe')
 
-l_abt = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
-d_ids = {"veermehta6@outlook.com":"vam#090905","veeramehta09@gmail.com":"vam#090905","veermehta2@outlook.com":"vam#090905","veermehta4@outlook.com":"vam#090905","veeramehta09@outlook.com":"Vam#090905"}
-log = []
 browser = webdriver.Chrome(service = s, options = chrome_options)
 
 browser.get("https://www.instagram.com")
 time.sleep(2)
 uname = browser.find_element("xpath", "//input[@type = 'text']")
-uname.send_keys("veer_0909")
+uname.send_keys("your_username")
 paswd = browser.find_element("xpath", "//input[@type = 'password']")
-paswd.send_keys("VAM#090905")
+paswd.send_keys("your_password")
 submit = browser.find_element("xpath", "//button[@type = 'submit']")
 submit.click()
 time.sleep(5)
-browser.get("https://www.instagram.com/veer_0909")
+browser.get("https://www.instagram.com/your_username")
 time.sleep(2)
 
 followers = int(browser.find_element("xpath", "//span[@class = '_ac2a']").get_attribute('innerHTML')[6:-7])
 following = int(browser.find_element("xpath", "//span[@class = '_ac2a']").get_attribute('innerHTML')[6:-7])
 l_following, l_followers = [],[]
 time.sleep(2)
-browser.get("https://www.instagram.com/veer_0909/followers")
+browser.get("https://www.instagram.com/your_username/followers")
 time.sleep(2)
 body = browser.find_element("css selector",'body')
 ac = ActionChains(browser)
@@ -61,7 +58,7 @@ for i in a:
 	l_follwers.append(i.text)
 
 time.sleep(2)
-browser.get("https://www.instagram.com/veer_0909/following")
+browser.get("https://www.instagram.com/your_username/following")
 time.sleep(2)
 ac = ActionChains(browser)
 body = browser.find_element("css selector",'body')
