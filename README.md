@@ -1,2 +1,2 @@
 # Instagram_Followers_Checker
-It lists the people whom you follow, but they don't follow you.
+It lists the people that don't follow you, but are followed by you.
