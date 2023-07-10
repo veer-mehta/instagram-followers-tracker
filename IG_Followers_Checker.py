@@ -6,7 +6,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver import ActionChains
 
 
-
 """
 install python:				https://www.python.org/downloads/
 --> Custom installation --> Add to Path
@@ -14,9 +13,7 @@ install python:				https://www.python.org/downloads/
 install selenium:
 pip install selenium
 
-download edge webdriver from
-https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/
-keep the edge webdriver file in same folder as this file
+download chrome webdriver and keep it in the same folder as the program
 """
 
 
