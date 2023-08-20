@@ -24,8 +24,8 @@ l_abt = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', '
 log = []
 UNM = "YOUR_USERNAME"
 PWD = "YOUR_PASSWORD"
-RECORDS = 100							#Maximum amount among Followers and Following
-SCROLL_AMT = RECORDS//12
+RECORDS = 100							#Maximum amount of Followers and Following
+SCROLL_AMT = RECORDS//6
 browser = webdriver.Chrome(service = s, options = chrome_options)
 browser.maximize_window()
 browser.get("https://www.instagram.com")
@@ -63,11 +63,12 @@ for i in range(SCROLL_AMT):
 a = browser.find_elements("xpath", "//div[@class='x9f619 xjbqb8w x1rg5ohu x168nmei x13lgxp2 x5pf9jr xo71vjh x1n2onr6 x1plvlek xryxfnj x1c4vz4f x2lah0s x1q0g3np xqjyukv x6s0dn4 x1oa3qoh x1nhvcw1']")
 for i in a:
 	l_following.append(i.text)
-print("Your Followers: ", l_followers, len(l_followers))
-print("Your Following: ", l_following, len(l_following))
+print("Your Followers: ", l_followers, "\nNo. of Followers: ", len(l_followers))
+print("Your Following: ", l_following, "\nNo. of Accounts you Follow: ",  len(l_following))
 
 l_extra = []
 for i in l_following:
 	if i not in l_followers:
 		l_extra.append(i)
-print("Extra:", l_extra)
+print("Account which don't Follow you:", str(l_extra)[1:-1])
+input()
