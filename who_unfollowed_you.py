@@ -50,7 +50,7 @@ for x in range(2):
 		body.send_keys(Keys.PAGE_DOWN)
 		time.sleep(0.5)
 
-	a = browser.find_elements("xpath", "//span[@class='_aacl _aaco _aacw _aacx _aad7 _aade']")
+	a = browser.find_elements("xpath", "//span[@class='_ap3a _aaco _aacw _aacx _aad7 _aade']")
 	for i in a:
 		l_flw[x].append(i.text)
 
