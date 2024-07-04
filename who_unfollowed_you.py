@@ -43,8 +43,7 @@ for x in range(2):
 	time.sleep(5)
 	body = browser.find_element("css selector",'body')
 
-	ac = ActionChains(browser)
-	ac.move_to_element(body).move_by_offset(0,0).click().perform()
+	body.click()
 	time.sleep(0.5)
 	for i in range(SCROLL_AMT):
 		body.send_keys(Keys.PAGE_DOWN)
